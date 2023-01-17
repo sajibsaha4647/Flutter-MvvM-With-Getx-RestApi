@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:trygetxproject/Utils/Routes/RoutesName.dart';
 
 import 'Utils/Routes/Routes.dart';
+import 'ViewModel/Bindings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +15,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      initialBinding:ViewModelBinding(),
       debugShowCheckedModeBanner: false,
-      // You can use the library anywhere in the app even in theme
       theme: ThemeData(
         primarySwatch: Colors.cyan,
       ),
